@@ -1,0 +1,8 @@
+<p>articles index</p>
+<% @articles.each do |article| %>
+  <%= article.title %>
+  <%= article.meta_title %>
+  <%= article.summary %>
+  <%= article.content %>
+  <%= article.slug %>
+<% end %>
