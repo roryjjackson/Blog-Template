@@ -4,8 +4,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
     # raise
+    @article = Article.new(article_params)
+    @article.user_id = current_user.id
     if @article.save
       redirect_to article_path(@article)
     else
